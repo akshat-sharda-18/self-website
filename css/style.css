@@ -1,5 +1,160 @@
+/* RESETTING */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* VARIABLES */
+
+:root {
+    /* FONT */
+    --FF: "Nunito", sans-serif;
+    --FF-NAME: "Bungee";
+    --FF-HEADINGS: Courier;
+    --FS: clamp(1rem, 2.2vh, 1.5rem);
+
+    /* COLORS */
+    --BG-DARK-BLUE: #000E2D;
+    --BG-GRADIENT: linear-gradient(var(--BG-DARK-BLUE), #000000);
+    --FONT-COLOR: #FFFFFF;
+
+    /* PADDING */
+    --PADDING-TB-HEADER: 1rem;
+    --PADDING-SIDE-HEADER: 2rem;
+    --PADDING-MAINTB-HEADER: 0.5em;
+    --PADDING-MAINSIDE-HEADER: 6em;
+    --PADDING-CARD: 1.5rem;
+}
+
+/* GENERAL STYLES */
+
+html {
+    font: var(--FS) var(--FF);
+    background-image: var(--BG-GRADIENT);
+}
+
+body {
+    color: var(--FONT-COLOR);
+}
+
+svg {
+    fill: var(--FONT-COLOR);
+}
+
+h1 {
+    font: 3rem var(--FF-NAME);
+}
+
+h2 {
+    font: 2rem var(--FF-HEADINGS);
+}
+
+h3 {
+    font: 1.5rem var(--FF-HEADINGS);
+}
+
+h4 {
+    font: 1rem var(--FF-HEADINGS);
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+/* HEADER */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--BG-DARK-BLUE);
+    padding: var(--PADDING-TB-HEADER) var(--PADDING-SIDE-HEADER);
+}
+
+/* HELPER CLASS */
+
+.fill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* MAIN */
+
+.main {
+    padding: var(--PADDING-MAINTB-HEADER) var(--PADDING-MAINSIDE-HEADER);
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: var(--PADDING-TB-HEADER) var(--PADDING-SIDE-HEADER);
+}
+
+/* SECTIONS */
+
+/* .section {
+    flex: 1;
+} */
+
+.section-flex {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+/* BOX */
+
+.box {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.card {
+    padding: var(--PADDING-CARD);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    min-width: 20rem;
+    flex: 1;
+}
+
+.image {
+    background-image: url('../img/WorkIsMysteriousAndImportant.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    justify-content: flex-end;
+}
+
+.image-text {
+    padding: var(--PADDING-CARD);
+}
+
+.image-text > h4, .image-text > div:not(:last-child) {
+    padding-bottom: 1rem;
+}
+
+/* ARROWS */
+
+svg:hover, svg:focus {
+    transform: scale(1.2);
 }
