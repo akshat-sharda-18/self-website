@@ -59,7 +59,6 @@ h4 {
     font: 1rem var(--FF-HEADINGS);
 }
 
-
 ul {
     list-style-type: none;
 }
@@ -72,6 +71,7 @@ ul {
     z-index: 1;
     background-color: var(--BG-DARK-BLUE);
     padding: var(--PADDING-TB-HEADER) var(--PADDING-SIDE-HEADER);
+    width: 100%;
 }
 
 /* HELPER CLASS */
@@ -157,4 +157,13 @@ ul {
 
 svg:hover, svg:focus {
     transform: scale(1.2);
+}
+
+@media only screen and (max-width: 600px) {
+    .main {
+        padding: 0.5rem;
+    }
+    .column {
+        min-width: 10rem;
+    }
 }
